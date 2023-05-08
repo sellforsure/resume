@@ -1,0 +1,105 @@
+<header>
+    <div>
+        <center>
+            <h1>{{name}}</h1>
+        </center>
+        <div>
+            <time>
+                <em>{{birthdate}} - {{deathdate}}</em>
+            </time>
+        </div>
+        <div>
+            <br>
+            <p>Place of birth: <em>{{birthplace}}</em></p>
+            <p>Place of death: <em>{{deathplace}}</em></p>
+            <p>Nationality: <em>{{nationality}}</em></p>
+        </div>
+    </div>
+</header>
+
+<hr>
+<br>
+
+<main>
+    <div>
+        <center>
+            <h2>Biography</h2>
+        </center>
+        <div>
+            Occupation:
+            <b>{{occupation}}</b>
+            <p>Known for: {{known_for}}</p>
+        </div>
+        <div>
+            <b>Educations:</b>
+            <div>
+                <ul>
+                    {{#each education}}
+                    <li>
+                        <div>
+                            <p>
+                                <b>{{degree}}</b>,
+                                {{field}},
+                                {{institution}},
+                                <time>({{year}})</time>
+                            </p>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+
+        <br>
+
+        <div>
+            <b>Notable publications:</b>
+            <div>
+                <ul>
+                    {{#each notable_publications}}
+                    <li>
+                        <p>"{{title}}"</p>
+                        <time>({{year}})</time>
+                        <p>Publisher: {{publisher}}</p>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+
+        <br>
+
+        <div>
+            <b>Partners:</b>
+            <div>
+                <ul>
+                    {{#each partners}}
+                    <li>
+                        <p>
+                            {{name}},
+                            {{relationship}},
+                            <time>({{years}})</time>
+                        </p>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <div>
+            <b>Awards:</b>
+            <div>
+                <ul>
+                    {{#each awards}}
+                    <li>
+                        <p>
+                            {{title}},
+                            {{description}},
+                            <time>({{year}})</time>
+                        </p>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
