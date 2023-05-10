@@ -1,0 +1,96 @@
+<header>
+    <center>
+        <h1>Programming language</h1>
+    </center>
+</header>
+<main>
+    {{#with web}}
+    <div>
+        {{#each languages}}
+        <ul>
+            <br>
+            <li>
+                <div>
+                    <div>
+                        <strong>{{name}}</strong>
+                        <p>Version - {{version}}</p>
+                        <em>{{description}}</em>
+                    </div>
+                    {{#each elements}}
+                    <div>
+                        <dl>
+                            <div>
+                                <dt>
+                                    <b>{{name}}</b>
+                                </dt>
+                                <dd>
+                                    <em>{{description}}</em>
+                                </dd>
+                            </div>
+
+                            <div>
+                                <div>
+                                    {{#if attributes}}
+                                    <p>Attributes:</p>
+                                    {{/if}}
+                                </div>
+                                <div>
+                                    <ul>
+                                        {{#each attributes}}
+                                        <li>
+                                            <b>{{name}}</b> -
+                                            {{description}}
+                                        </li>
+                                        {{/each}}
+                                        <hr>
+                                        <br>
+                                    </ul>
+                                </div>
+                            </div>
+                        </dl>
+                    </div>
+                    {{/each}}
+                </div>
+
+                <div>
+                    <div>
+                        {{#if properties}}
+                        <br>
+                        <p>Properties:</p>
+                        {{/if}}
+                    </div>
+                    {{#each properties}}
+                    <div>
+                        <dl>
+                            <div>
+                                <dt>
+                                    <b>{{name}}</b>
+                                </dt>
+                                <dd>
+                                    <em>{{description}}</em>
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+
+                    <div>
+                        <div></div>
+                        <ul>
+                            {{#each values}}
+                            <li>
+                                <b>{{value}}</b> -
+                                {{description}}
+                            </li>
+                            {{/each}}
+                            <hr>
+                            <br>
+                        </ul>
+                    </div>
+                    {{/each}}
+                </div>
+            </li>
+        </ul>
+        {{/each}}
+    </div>
+    {{/with}}
+</main>
