@@ -1,0 +1,155 @@
+<header>
+    <div>
+        <center>
+            <h1>{{name}}</h1>
+        </center>
+    </div>
+</header>
+
+<hr>
+<br>
+
+<main>
+    <div>
+        <h2>{{description}}</h2>
+        <b>Founder {{history.founder}} (<time>{{history.year}} year)</time></b>
+    </div>
+
+    <hr>
+    <br>
+    <div>
+        <center>
+            <strong>Types</strong>
+        </center>
+    </div>
+    <div>
+
+        <ul>
+            {{#each types}}
+            <span class="badge text-bg-primary">
+                <li>{{this}}</li>
+            </span>
+            {{/each}}
+        </ul>
+
+    </div>
+    <div>
+        <div>
+            <center>
+                <strong>Syntax</strong>
+            </center>
+        </div>
+        <div>
+            {{#with syntax}}
+            variables
+            <ul>
+                {{#each variables}}
+                <span class="badge text-bg-secondary">
+                    <li>{{this}}</li>
+                </span>
+                {{/each}}
+            </ul>
+            functions
+            <ul>
+                {{#each functions}}
+                <span class="badge text-bg-secondary">
+                    <li>{{this}}</li>
+                </span>
+                {{/each}}
+            </ul>
+            conditionals
+            <ul>
+                {{#each conditionals}}
+                <span class="badge text-bg-secondary">
+                    <li>{{this}}</li>
+                </span>
+                {{/each}}
+            </ul>
+            loops
+            <ul>
+                {{#each loops}}
+                <span class="badge text-bg-secondary">
+                    <li>{{this}}</li>
+                </span>
+                {{/each}}
+            </ul>
+            classes
+            <ul>
+                {{#each classes}}
+                <span class="badge text-bg-secondary">
+                    <li>{{this}}</li>
+                </span>
+                {{/each}}
+            </ul>
+            {{/with}}
+        </div>
+    </div>
+    <div>
+        <div>
+            <center>
+                <strong>Features</strong>
+            </center>
+        </div>
+        <div>
+            <ul>
+                {{#each features}}
+                <br>
+                <span class="badge text-bg-success">
+                    <li>{{this}}</li>
+                </span>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <center>
+                <strong>Libraries</strong>
+            </center>
+        </div>
+        <div>
+            <ul>
+                {{#each libraries}}
+                <br>
+                <span class="badge text-bg-danger">
+                    <li>{{this}}</li>
+                </span>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <center>
+                <strong>Tools</strong>
+            </center>
+        </div>
+        <div>
+            <ul>
+                {{#each tools}}
+                <br>
+                <span class="badge text-bg-warning">
+                    <li>{{this}}</li>
+                </span>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <center>
+                <strong>Community</strong>
+            </center>
+        </div>
+        <div>
+            <ul>
+                {{#each community}}
+                <br>
+                <span class="badge text-bg-warning">
+                    <li>{{name}} ({{type}})</li>
+                </span>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</main>
