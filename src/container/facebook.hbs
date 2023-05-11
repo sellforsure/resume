@@ -1,0 +1,117 @@
+<header>
+    <div>
+        <center>
+            <h1>
+                <span class="badge text-bg-primary">
+                    <h1>{{name}}</h1>
+                </span>
+            </h1>
+        </center>
+
+    </div>
+</header>
+
+<hr>
+<br>
+
+<main>
+    <div>
+        <div>
+            <h2>users</h2>
+        </div>
+        <div>
+            <ul>
+                {{#each users}}
+                <li>
+                    <p>{{id}}</p>
+                    <p>{{name}}</p>
+                    <p>{{gender}}</p>
+                    <p>{{age}}</p>
+                    <div>
+                        <ul>
+                            {{#each friends}}
+                            <li>
+                                <p>{{id}}</p>
+                                <p>{{name}}</p>
+                                <p>{{gender}}</p>
+                                <p>{{age}}</p>
+                                {{#if mutual_friends}}
+                                <ul>
+                                    {{#each mutual_friends}}
+                                    <li>
+                                        <p>{{id}}</p>
+                                        <p>{{name}}</p>
+                                        <p>{{gender}}</p>
+                                        <p>{{age}}</p>
+                                        {{#if mutual_friends}}
+                                        <ul>
+                                            {{#each mutual_friends}}
+                                            <li>
+                                                <p>{{id}}</p>
+                                                <p>{{name}}</p>
+                                                <p>{{gender}}</p>
+                                                <p>{{age}}</p>
+                                            </li>
+                                            {{/each}}
+                                        </ul>
+                                        {{/if}}
+                                    </li>
+                                    {{/each}}
+                                    <ul>
+                                        {{#each groups}}
+                                        <li>
+                                            <p>{{id}}</p>
+                                            <p>{{name}}</p>
+                                            <p>{{description}}</p>
+                                            <ul>
+                                                {{#each members}}
+                                                <li>
+                                                    <p>{{id}}</p>
+                                                    <p>{{name}}</p>
+                                                    <p>{{gender}}</p>
+                                                    <p>{{age}}</p>
+                                                </li>
+                                                {{/each}}
+                                            </ul>
+                                        </li>
+                                        {{/each}}
+                                    </ul>
+                                    {{/if}}
+
+
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+
+                    <hr>
+                    <br>
+
+                    <div>
+                        <ul>
+                            {{#each groups}}
+                            <li>
+                                <p>{{id}}</p>
+                                <p>{{name}}</p>
+                                <p>{{description}}</p>
+                                <ul>
+                                    {{#each members}}
+                                    <li>
+                                        <p>{{id}}</p>
+                                        <p>{{name}}</p>
+                                        <p>{{gender}}</p>
+                                        <p>{{age}}</p>
+                                    </li>
+                                    {{/each}}
+                                </ul>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+
+    </div>
+</main>
