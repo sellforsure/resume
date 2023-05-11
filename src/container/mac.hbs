@@ -1,0 +1,89 @@
+<header>
+    <div>
+        <h1>{{name}} <span class="badge bg-secondary">New</span></h1>
+        <h2>Price <span class="badge text-bg-success">{{price}}</span></h2>
+        <h3>{{description}}</h3>
+        <h5>Category <span class="badge bg-secondary">{{category}}</span></h5>
+    </div>
+</header>
+
+<hr>
+<br>
+
+<main>
+    <div>
+        {{#with features}}
+        <div>
+            <strong>Processor</strong>
+            <ul>
+                {{#each processor}}
+                <li>
+                    {{this}}
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        <div>
+            <strong>memory</strong>
+            <ul>
+                {{#each memory}}
+                <li>
+                    {{this}}
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        <div>
+            <strong>storage</strong>
+            <ul>
+                {{#each storage}}
+                <li>
+                    {{this}}
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        <div>
+            <strong>display</strong>
+            <ul>
+                {{#each display}}
+                <li>
+                    {{this}}
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        <div>
+            <strong>graphics</strong>
+            <ul>
+                {{#each graphics}}
+                <li>
+                    {{this}}
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        <div>
+            <strong>ports</strong>
+            <ul>
+                {{#each ports}}
+                <li>
+                    <p>
+                        {{type}} - count {{count}}
+                    </p>
+                    <p>
+                    <ul>
+                        {{#each features}}
+                        <li>
+                            {{this}}
+                        </li>
+                        {{/each}}
+                    </ul>
+                    </p>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        {{/with}}
+    </div>
+</main>
