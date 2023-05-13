@@ -1,0 +1,138 @@
+<main>
+    <section>
+        {{#with heading}}
+        <div class="card">
+            <div class="card-body">
+                <div class="card">
+                    <div class="card-body">
+                        {{#with main}}
+                        <h1>{{title}}</h1>
+                        <p>{{text}}</p>
+                        <div>
+                            <button class="btn btn-primary">{{button_text.solid}}</button>
+                        </div>
+                        <br>
+                        <br>
+                        <div>
+                            <button class="btn btn-outline-primary">{{button_text.outline}}</button>
+                        </div>
+                        {{/with}}
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="card">
+                    <div class="card-body">
+                        {{#with second}}
+                        <h2>{{title}}</h2>
+                        <p>{{text}}</p>
+                        <div>
+                            <button class="btn btn-secondary">{{button_text.solid}}</button>
+                        </div>
+                        <br>
+                        <br>
+                        <div>
+                            <button class="btn btn-outline-secondary">{{button_text.outline}}</button>
+                        </div>
+                        {{/with}}
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="card">
+                    <div class="card-body">
+                        {{#with subblock}}
+                        <h3>{{title}}</h3>
+                        <p>{{text}}</p>
+                        <div>
+                            <button class="btn btn-dark">{{button_text.solid}}</button>
+                        </div>
+                        <br>
+                        <br>
+                        <div>
+                            <button class="btn btn-outline-dark">{{button_text.outline}}</button>
+                        </div>
+                        {{/with}}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        {{/with}}
+    </section>
+
+    <br>
+    <br>
+
+    <section>
+        {{#with nested_display}}
+        <div class="card">
+            <div class="card-body">
+                <div class="display-1">{{title}}</div>
+
+                <br>
+
+                {{#with children_display}}
+                <div class="card">
+                    <div class="card-body">
+                        <div class="display-4">{{title}}</div>
+                        <p>{{text}}</p>
+                        <div>
+                            <button class="btn btn-outline-warning">{{button.text}}</button>
+                        </div>
+                    </div>
+                </div>
+                {{/with}}
+
+                <br>
+
+                <h6>{{header_text}}</h6>
+
+                <br>
+
+                <button class="btn btn-info">{{button.text}}</button>
+            </div>
+        </div>
+        {{/with}}
+    </section>
+
+    <br>
+
+    <section>
+        {{#with paragraph}}
+        <div class="card">
+            <div class="card-body">
+                <p class="text-uppercase">{{title}}</p>
+
+                <br>
+
+                <p>{{text}}</p>
+
+                <br>
+
+                <a href="{{button.url}}" class="btn btn-link">{{button.text}}</a>
+
+                <br>
+                <br>
+
+                <div class="card">
+                    <div class="card-body">
+                        <ul>
+                            {{#each list_name}}
+                            <li>
+                                <a href="{{url}}" class="btn btn-link">{{text}}</a>
+                                <br>
+                                <br>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        {{/with}}
+    </section>
+</main>
