@@ -1,0 +1,130 @@
+<main class="g-3">
+    <div class="card">
+        <div class="card-title">
+            {{#with navigation}}
+            <div class="card-body">
+                <ul>
+                    {{#each links}}
+                    <a class="btn btn-link col-2" href="{{href}}">{{text}}</a>
+                    {{/each}}
+                    <a class="btn btn-primary col-1" href="{{button.href}}">{{button.text}}</a>
+                </ul>
+                {{/with}}
+
+                <div class="card row gx-4 ">
+                    <div class="card-body">
+                        {{#with header}}
+                        <h1>{{title}}</h1>
+                        <p>{{description}}</p>
+                        <a class="btn btn-primary col-1" href="{{button.link}}">{{button.text}}</a>
+                        {{/with}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="card">
+            {{#with city}}
+            <h2 class="card-title">{{title}}</h2>
+            <div class="card-body">
+                <div class="row">
+                    {{#each cards}}
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <img src="{{picture.src}}" alt="picture.alt" width="600">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">{{title}}</h6>
+                                <p>{{description}}</p>
+                                <button class="btn btn-primary" href="{{button.href}}">{{button.text}}</button>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            {{/with}}
+        </div>
+    </section>
+
+    <section class="col-12">
+        {{#with winner}}
+        <h2>{{title}}</h2>
+        {{#with table}}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <ul></ul>
+                    {{#each head}}
+                    <th>{{this}}</th>
+                    {{/each}}
+                    </ul>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each user}}
+                <tr>
+                    <th>{{place}}</th>
+                    <td>{{name}}</td>
+                    <td>{{surname}}</td>
+                    <td>{{nickname}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        {{/with}}
+        {{/with}}
+    </section>
+
+    <section>
+        <div class="card">
+            {{#with gallery}}
+            <div class="card">
+                <div class="row">
+                    <h2>{{title}}</h2>
+                    {{#each cards}}
+                    <div class="card-body col-4">
+                        <div class="card-header">{{name}}</div>
+                        <ul class="list-group list-group-flush">
+                            {{#each items}}
+                            <li class="list-group-item">
+                                {{this}}
+
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            {{/with}}
+        </div>
+    </section>
+
+    <section>
+        {{#with relaxion}}
+        <h2>{{title}}</h2>
+        <div class="row g-3">
+            {{#each cards}}
+            <div class="card col-6">
+                <div class="card-header">
+                    <p>{{header}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        {{title}}
+                    </li>
+                    <li class="list-group-item">
+                        {{description}}
+                    </li>
+                </ul>
+
+            </div>
+            {{/each}}
+        </div>
+        {{/with}}
+    </section>
+</main>
