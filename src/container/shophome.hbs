@@ -61,11 +61,10 @@
                 <div class="col-2">
                     <div class="nav nav-tabs">
                         <div class="nav-item mx-4">
-                            {{#unless isActive}}
-                            <a href="#" class="nav-link">{{text}}</a>
-                            {{else}}
-                            <a href="#" class="nav-link active">{{text}}</a>
-                            {{/unless}}
+                            <a href="#" class="nav-link 
+                                {{#if isActive}}active{{/if}} {{#if isDisabled}}disabled{{/if}}">
+                                {{text}}
+                            </a>
                         </div>
                     </div>
                 </div>
