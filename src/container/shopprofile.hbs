@@ -1,0 +1,79 @@
+<main class="row m-2">
+
+    <header>
+        {{>headerhome}}
+
+        <h1 class="ms-2 mt-4">{{header}}</h1>
+        {{#with purchase}}
+        <div>
+
+            <div class="nav nav-tabs mb-4">
+                {{#each tabs}}
+                <div class="nav-item col-3">
+                    <div class="nav-link">{{this}}</div>
+                </div>
+                {{/each}}
+            </div>
+
+            {{#with actionBlock}}
+            <div class="row mt-4">
+                <div class="col-3">
+                    <input class="form-control" placeholder="{{input.placeholder}}">
+                </div>
+                {{#each buttons}}
+                <div class="col-2 ms-4 ">
+                    <a href="{{link}}"
+                        class="btn btn-{{#if isSuccess}}success{{/if}}{{#if isOutline}}outline-success{{/if}}{{#if isDanger}}outline-danger{{/if}}">
+                        {{text}}
+                    </a>
+                </div>
+                {{/each}}
+            </div>
+            {{/with}}
+        </div>
+    </header>
+
+    <div class="mt-2 mb-4">
+        <hr>
+    </div>
+
+    <section>
+        <div class="card">
+            <ul class="list-group list-group-flush ">
+                {{#each itemList}}
+                <li class="list-group-item">
+
+                    <div class="col">
+                        {{number}}
+                        <b>{{status}}</b>
+                    </div>
+
+                    <div class="col">{{amount.title}}:
+                        <p>{{amount.value}}</p>
+                    </div>
+
+
+
+                    {{#each images}}
+                    <div class="col">
+                        <img src="{{this}}">
+                    </div>
+                    {{/each}}
+
+
+                    <div class="col">
+                        <div>
+                            {{#with button}}
+                            <a href="{{link}}" class="btn btn-{{#if isPrimary}}primary{{/if}}">{{text}}</a>
+                            {{/with}}
+                        </div>
+                    </div>
+
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </section>
+
+    {{/with}}
+</main>
