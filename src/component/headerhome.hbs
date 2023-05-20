@@ -1,0 +1,13 @@
+<div class="pe-3">
+    {{#with navigation}}
+    <nav class="col-6">
+        <div class="nav">
+            {{#each links}}
+            <div class="nav-item">
+                <a href="{{href}}" class="nav-link {{#unless href}}disabled{{/unless}}">{{text}}</a>
+            </div>
+            {{/each}}
+        </div>
+    </nav>
+    {{/with}}
+</div>
