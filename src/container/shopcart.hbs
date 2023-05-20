@@ -1,0 +1,85 @@
+<main class="m-2">
+
+    <header class="row">
+        {{>headerhome}}
+
+        {{#with header}}
+        <h1 class=" display-3 ms-2 mt-4">{{title}}</h1>
+        <div>
+            <a href="{{button.link}}" class="btn btn-white">
+                {{button.text}}
+            </a>
+        </div>
+        {{/with}}
+    </header>
+
+    <div class="mt-4 mb-3">
+        <hr>
+    </div>
+
+    {{#each goodsBlock}}
+    {{>cardGoodsItem}}
+    {{/each}}
+
+    <div class="mt-4 mb-3">
+        <hr>
+    </div>
+
+    <div class="row">
+        {{#with total}}
+        <div class="display-6 ms-2">{{title}}</div>
+        <div class="display-5 ms-2">{{amount}}</div>
+        <div class="ms-2">{{delivery}}</div>
+        <div>
+            {{#each buttons}}
+            <div class="m-3">
+                <a href="{{link}}"
+                    class="btn btn-{{#if isSuccess}}success{{/if}}{{#if isOutline}}outline-success{{/if}}">
+                    {{text}}
+                </a>
+            </div>
+            {{/each}}
+        </div>
+        {{/with}}
+    </div>
+
+    <div class="mt-4 mb-3">
+        <hr>
+    </div>
+
+    {{#with subscribe}}
+    <div class="row">
+        <div class="card text-bg-dark">
+            <div class="card-body">
+                <h2>{{header}}</h2>
+                <p>{{description}}</p>
+                {{#each buttons}}
+                <div class="mt-3">
+                    <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    {{/with}}
+
+    <div class="mt-4 mb-3">
+        <hr>
+    </div>
+
+    <footer class="row">
+        {{#each footer}}
+        {{#each this}}
+        <nav class="col-2">
+            <div class="nav">
+                <div class="nav-item">
+                    <div>
+                        <a href="{{link}}" class="nav-link">{{text}}</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        {{/each}}
+        {{/each}}
+    </footer>
+</main>
