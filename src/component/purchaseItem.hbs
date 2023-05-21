@@ -1,0 +1,26 @@
+<div class="card my-2">
+    <div class="row mt-5">
+        <div class="col-2 ms-1">
+            {{number}}
+            <b>{{status}}</b>
+        </div>
+
+        <div class="col-1">{{amount.title}}:
+            <p>{{amount.value}}</p>
+        </div>
+
+        <div class="col-6 mb-4">
+            {{#each images}}
+            <img src="{{this}}">
+            {{/each}}
+        </div>
+
+        <div class="col-2">
+            <div>
+                {{#with button}}
+                <a href="{{link}}" class="btn btn-{{#if isPrimary}}primary{{/if}}">{{text}}</a>
+                {{/with}}
+            </div>
+        </div>
+    </div>
+</div>
