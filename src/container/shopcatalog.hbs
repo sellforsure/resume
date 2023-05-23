@@ -98,81 +98,26 @@
                     </div>
                     {{/with}}
                 </div>
-
-
-
-                <div>
-
-                </div>
             </div>
         </div>
+
 
         <div class="col-9">
-            {{#each goodsList}}
-            <div class="card">
-                <div>
-                    <div class="card-header">
-                        <img src="{{img}}">
-                    </div>
-                    <div class="card-body">
-                        {{#if isHot}}
-                        <span class="badge bg-warning text-uppercase">Hot</span>
-                        {{/if}}
-                        {{#if isNew}}
-                        <span class="badge bg-primary text-uppercase">New</span>
-                        {{/if}}
-                        <div class="my-2">
-                            {{#if isFast}}
-                            <button class="btn btn-success">
-                                Швидка доставка
-                            </button>
-                            {{/if}}
-                        </div>
-                        <div class="my-2">
-                            {{#if isFree}}
-                            <button class="btn btn-secondary">
-                                Безкоштовна доставка
-                            </button>
-                            {{/if}}
-                        </div>
-
-                        <strong>{{name}}</strong>
-                        <p>{{review.amount}} {{review.text}}</p>
-                        <strong>{{price}}</strong>
-                        <p>{{delivery}}</p>
-
-                        <div>
-                            {{#each buttons}}
-                            <div class="my-2">
-                                <a href="{{link}}"
-                                    class="btn btn-{{#if isPrimary}}primary{{/if}}{{#if isSecondary}}secondary{{/if}}">
-                                    {{text}}
-                                </a>
-                                {{/each}}
-                            </div>
-                        </div>
-
-                        <div>
-                            {{#each characteristics}}
-                            <div>{{title}}: {{value}}</div>
-                            {{/each}}
-                        </div>
-                    </div>
-                </div>
-                {{/each}}
+            <div class="row">
+                {{>catalogItem}}
             </div>
-
         </div>
+    </div>
 
 
-        <div class="my-3">
-            <hr>
-        </div>
+    <div class="my-3">
+        <hr>
+    </div>
 
 
-        <footer class="row">
-            {{>footerLink}}
-        </footer>
+    <footer class="row">
+        {{>footerLink}}
+    </footer>
 
 
 </main>
