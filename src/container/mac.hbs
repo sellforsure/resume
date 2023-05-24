@@ -1,19 +1,20 @@
-<header>
-    <div>
-        <h1>{{name}} <span class="badge bg-secondary">New</span></h1>
-        <h2>Price <span class="badge text-bg-success">{{price}}</span></h2>
-        <h3>{{description}}</h3>
-        <h5>Category <span class="badge bg-secondary">{{category}}</span></h5>
-    </div>
-</header>
-
-<hr>
-<br>
-
-<main>
-    <div>
-        {{#with features}}
+<main class="m-3">
+    <header>
         <div>
+            <h1>{{name}} <span class="badge bg-secondary">New</span></h1>
+            <h2>Price <span class="badge text-bg-success">{{price}}</span></h2>
+            <h3>{{description}}</h3>
+            <h5>Category <span class="badge bg-secondary">{{category}}</span></h5>
+        </div>
+    </header>
+
+    <div class="my-3">
+        <hr>
+    </div>
+
+    <div class="row">
+        {{#with features}}
+        <div class="col-4">
             <strong>Processor</strong>
             <ul>
                 {{#each processor}}
@@ -23,7 +24,7 @@
                 {{/each}}
             </ul>
         </div>
-        <div>
+        <div class="col-4">
             <strong>memory</strong>
             <ul>
                 {{#each memory}}
@@ -33,7 +34,7 @@
                 {{/each}}
             </ul>
         </div>
-        <div>
+        <div class="col-4">
             <strong>storage</strong>
             <ul>
                 {{#each storage}}
@@ -43,7 +44,7 @@
                 {{/each}}
             </ul>
         </div>
-        <div>
+        <div class="col-4">
             <strong>display</strong>
             <ul>
                 {{#each display}}
@@ -53,7 +54,7 @@
                 {{/each}}
             </ul>
         </div>
-        <div>
+        <div class="col-4">
             <strong>graphics</strong>
             <ul>
                 {{#each graphics}}
@@ -63,7 +64,7 @@
                 {{/each}}
             </ul>
         </div>
-        <div>
+        <div class="col-4">
             <strong>ports</strong>
             <ul>
                 {{#each ports}}

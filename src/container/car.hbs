@@ -1,4 +1,4 @@
-<header>
+<header class="m-3">
     <div>
         <h1>
             {{make}} {{model}}
@@ -13,15 +13,15 @@
 <hr>
 <br>
 
-<main>
+<main class="m-3">
     <div>
         <div>
             {{#with features}}
             <div>
-                <div>
-                    <h2>features <span class="badge bg-secondary">interior</span></h2>
-                </div>
-                <div>
+                <h2>Features <span class="badge bg-primary">interior</span></h2>
+            </div>
+            <div class="row">
+                <div class="col-2">
                     {{#with interior}}
                     <strong>Seats:</strong>
                     {{#with seats}}
@@ -35,7 +35,7 @@
                     {{/if}}
                     {{/with}}
                 </div>
-                <div>
+                <div class="col-2">
                     <strong>Dashboard:</strong>
                     {{#with dashboard}}
                     <p>{{material}}</p>
@@ -50,7 +50,7 @@
                         {{/with}}
                     </p>
                 </div>
-                <div>
+                <div class="col-2">
                     <strong>Audio:</strong>
                     {{#with audio}}
                     <p>{{system}}</p>
@@ -77,19 +77,19 @@
                 <hr>
                 <br>
 
-                <div>
-                    <div>
-                        <h3>features <span class="badge bg-secondary">exterior</span></h3>
+                <div class="row">
+                    <div class="col-4">
+                        <h3>Features <span class="badge bg-primary">exterior</span></h3>
                     </div>
-                    <div>
+                    <div class="row">
                         {{#with exterior}}
-                        <div>
+                        <div class="col-2">
                             <strong>Wheels:</strong>
                             {{#with wheels}}
                             <p>{{size}}, {{type}}, {{color}}</p>
                             {{/with}}
                         </div>
-                        <div>
+                        <div class="col-2">
                             <strong>Headlights</strong>
                             {{#with headlights}}
                             <p>
@@ -111,7 +111,7 @@
 
                 <div>
                     <div>
-                        <h4>features <span class="badge bg-secondary">safety</span></h4>
+                        <h4>Features <span class="badge bg-primary">safety</span></h4>
                     </div>
                     {{#with safety}}
                     <div>

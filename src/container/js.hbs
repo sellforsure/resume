@@ -1,4 +1,4 @@
-<header>
+<header c>
     <div>
         <center>
             <h1>{{name}}</h1>
@@ -6,24 +6,24 @@
     </div>
 </header>
 
-<hr>
-<br>
+<div class="mb-5">
+    <hr>
+</div>
 
-<main>
+<main class="row m-3">
     <div>
         <h2>{{description}}</h2>
         <b>Founder {{history.founder}} (<time>{{history.year}} year)</time></b>
     </div>
 
-    <hr>
-    <br>
-    <div>
-        <center>
-            <strong>Types</strong>
-        </center>
+    <div class="my-5">
+        <hr>
     </div>
-    <div>
 
+    <div>
+        <div class="text-center m-3">
+            <strong class="display-6">Types</strong>
+        </div>
         <ul>
             {{#each types}}
             <span class="badge text-bg-primary">
@@ -31,13 +31,11 @@
             </span>
             {{/each}}
         </ul>
-
     </div>
+
     <div>
-        <div>
-            <center>
-                <strong>Syntax</strong>
-            </center>
+        <div class="text-center m-3">
+            <strong class="display-6">Syntax</strong>
         </div>
         <div>
             {{#with syntax}}
@@ -84,11 +82,10 @@
             {{/with}}
         </div>
     </div>
+
     <div>
-        <div>
-            <center>
-                <strong>Features</strong>
-            </center>
+        <div class="text-center m-3">
+            <strong class="display-6">Features</strong>
         </div>
         <div>
             <ul>
@@ -101,11 +98,10 @@
             </ul>
         </div>
     </div>
+
     <div>
-        <div>
-            <center>
-                <strong>Libraries</strong>
-            </center>
+        <div class="text-center m-3">
+            <strong class="display-6">Libraries</strong>
         </div>
         <div>
             <ul>
@@ -118,11 +114,10 @@
             </ul>
         </div>
     </div>
+
     <div>
-        <div>
-            <center>
-                <strong>Tools</strong>
-            </center>
+        <div class="text-center m-3">
+            <strong class="display-6">Tools</strong>
         </div>
         <div>
             <ul>
@@ -135,11 +130,10 @@
             </ul>
         </div>
     </div>
+
     <div>
-        <div>
-            <center>
-                <strong>Community</strong>
-            </center>
+        <div class="text-center m-3">
+            <strong class="display-6">Community</strong>
         </div>
         <div>
             <ul>
