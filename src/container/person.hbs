@@ -1,24 +1,21 @@
-{{#with person}}
-<header>
-  <div>
+<main class="m-3">
+  {{#with person}}
+  <header>
     <div>
-      <h1>{{name}}</h1>
-      <p><b>Age:</b> {{age}}</p>
-      <p><b>Gender:</b> {{gender}}</p>
-      <address>
-        <b>Address:</b>
-        {{#with address}}
-        {{country}}, {{state}}, {{city}}, {{street}}, {{zip}}
-        {{/with}}
-      </address>
+      <div>
+        <h1>{{name}}</h1>
+        <p><b>Age:</b> {{age}}</p>
+        <p><b>Gender:</b> {{gender}}</p>
+        <address>
+          <b>Address:</b>
+          {{#with address}}
+          {{country}}, {{state}}, {{city}}, {{street}}, {{zip}}
+          {{/with}}
+        </address>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<br>
-<hr>
-
-<main>
   <section>
     <div>
       <h2>Education</h2>
@@ -39,8 +36,9 @@
     </div>
   </section>
 
-  <br>
-  <hr>
+  <div class="my-4">
+    <hr>
+  </div>
 
   <section>
     <div>

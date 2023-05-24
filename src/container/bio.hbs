@@ -1,8 +1,6 @@
-<header>
+<header class="m-3">
     <div>
-        <center>
-            <h1>{{name}}</h1>
-        </center>
+        <h1 class="text-center">{{name}}</h1>
         <div>
             <time>
                 <em>{{birthdate}} - {{deathdate}}</em>
@@ -17,10 +15,11 @@
     </div>
 </header>
 
-<hr>
-<br>
+<div class="my-4">
+    <hr>
+</div>
 
-<main>
+<main class="m-3">
     <div>
         <center>
             <h2>Biography</h2>
@@ -37,12 +36,10 @@
                     {{#each education}}
                     <li>
                         <div>
-                            <p>
-                                <b>{{degree}}</b>,
-                                {{field}},
-                                {{institution}},
-                                <time>({{year}})</time>
-                            </p>
+                            {{degree}},
+                            {{field}},
+                            {{institution}},
+                            <time>({{year}})</time>
                         </div>
                     </li>
                     {{/each}}

@@ -1,28 +1,25 @@
-<header>
-    <div>
-        <center>
-            <h1>
-                <span class="badge text-bg-primary">
-                    <h1>{{name}}</h1>
-                </span>
-            </h1>
-        </center>
+<header class="m-3">
+    <div class="text-center">
+        <span class="badge text-bg-primary">
+            <h1 class="display-3">{{name}}</h1>
+        </span>
     </div>
 </header>
 
-<hr>
-<br>
+<div class="m-3">
+    <hr>
+</div>
 
-<main>
+<main class="m-3">
     <div>
         <div>
             <h2>users</h2>
         </div>
         <section>
             <div>
-                <ul>
+                <ul class="row">
                     {{#each users}}
-                    <li>
+                    <li class="col-6">
                         <strong>
                             <p>{{name}}</p>
                         </strong>

@@ -38,11 +38,99 @@ var footer = {
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/', function (req, res) {
+router.get('/index', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+    pages: [
+      {
+        text: 'Bio',
+        href: '/bio',
+      },
+      {
+        text: 'Car',
+        href: '/car',
+      },
+      {
+        text: 'Education',
+        href: '/education',
+      },
+      {
+        text: 'Facebook',
+        href: '/facebook',
+      },
+      {
+        text: 'Js',
+        href: '/js',
+      },
+      {
+        text: 'Mac',
+        href: '/mac',
+      },
+      {
+        text: 'Program',
+        href: '/program',
+      },
+      {
+        text: 'Person',
+        href: '/person',
+      },
+      {
+        text: 'Shopcart',
+        href: '/shopcart',
+      },
+      {
+        text: 'Shopcatalog',
+        href: '/shopcatalog',
+      },
+      {
+        text: 'Shophome',
+        href: '/shophome',
+      },
+      {
+        text: 'Shoporder',
+        href: '/shoporder',
+      },
+      {
+        text: 'Shopprofile',
+        href: '/shopprofile',
+      },
+      {
+        text: 'Shopreview',
+        href: '/shopreview',
+      },
+      {
+        text: 'Skills',
+        href: '/skills',
+      },
+      {
+        text: 'Summary',
+        href: '/summary',
+      },
+      {
+        text: 'Task21',
+        href: '/task21',
+      },
+      {
+        text: 'Task22',
+        href: '/task22',
+      },
+      {
+        text: 'Task31',
+        href: '/task31',
+      },
+      {
+        text: 'Web',
+        href: '/web',
+      },
+      {
+        text: 'Work',
+        href: '/work',
+      },
+    ],
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
