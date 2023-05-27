@@ -1,15 +1,17 @@
 {{#each footer}}
-{{#each this}}
-
 <nav class="col-2">
     <div class="nav">
         <div class="nav-item">
+            {{#each this}}
             <div>
+                {{#if @last}}
+                <a href="{{link}}" class="nav-link disabled">{{text}}</a>
+                {{else}}
                 <a href="{{link}}" class="nav-link">{{text}}</a>
+                {{/if}}
             </div>
+            {{/each}}
         </div>
     </div>
 </nav>
-
-{{/each}}
 {{/each}}
